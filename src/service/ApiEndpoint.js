@@ -1,1 +1,1 @@
-export const BaseUrl = "http://localhost:5000/api"
+export const BaseUrl = "https://p-t-qr-api.onrender.com/api"

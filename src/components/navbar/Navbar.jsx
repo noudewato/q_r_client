@@ -60,12 +60,13 @@ function Navbar(props) {
                 }}
                 to={'/'}
               >
-                <Stack direction="row" sx={{ fontSize: '22px' }} alignItems="center">
+                <Stack direction="row" sx={{ fontSize: '14px' }} alignItems="center">
                   <img
                     src={`${Perfect}`}
                     alt="perfect_touch"
                     width="50px"
                     height="50px"
+                    style={{ marginRight: '3px' }}
                   />
                   Perfect Touch
                 </Stack>
@@ -78,7 +79,7 @@ function Navbar(props) {
 
       <Divider />
 
-      <Box sx={{ mb: 5, mx: 2.5 }}>
+      <Box sx={{ my: 5, mx: 2.5 }}>
         <Box sx={{ ml: 2 }}>
           <a
             style={{

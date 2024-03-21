@@ -126,25 +126,27 @@ const MenuList = () => {
                   >
                     Go back
                   </Link>
-                  {/* <input
-                      type="text"
-                      value={query}
-                      onChange={(e) => setQuery(e.target.value)}
-                      placeholder="search..."
-                      style={{
-                        width: 'auto',
-                        padding: '.5rem 1rem',
-                        borderRadius: '10px',
-                        border: '1px solid gold',
-                        boxShadow: '0 4px 8px rgb(237, 237,237)',
-                        marginBottom: '1.5rem',
-                      }}
-                    /> */}
                     <Typography variant='h5' component="div" sx={{ fontWeight: 'bold', color: 'black' }}>
                        {category.name}
                     </Typography>
                 </Box>
-                <Box sm="12" md="6" lg="6"></Box>
+                <Box sx={{ padding: { xs: '10px 20px 0px  20px', sm: '10px 20px 0px 20px', md: '10px 500px 0px 500px' } }}>
+                  <input
+                    type="text"
+                    value={query}
+                    style={{
+                      width: '100%',
+                      padding: '.5rem 1rem',
+                      borderRadius: '10px',
+                      border: '1px solid gold',
+                      boxShadow: '0 4px 8px rgb(237, 237,237)',
+                      marginBottom: '.5rem',
+                      outline: 'none'
+                    }}
+                    placeholder="search ..."
+                    onChange={(e) => setQuery(e.target.value)}
+                  />
+                </Box>
               </Box>
               <Box sx={{ padding: { xs: '20px', sm:'20px', md: '0px 50px', lg: '20px 250px'} }}>
                 <Grid container rowSpacing={3} columnSpacing={{ xs: 0, sm: 2, md: 3 }}>
