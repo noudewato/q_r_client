@@ -139,7 +139,7 @@ const MenuList = () => {
                       padding: '.5rem 1rem',
                       borderRadius: '10px',
                       border: '1px solid gold',
-                      boxShadow: '0 4px 8px rgb(237, 237,237)',
+                      boxShadow: '0 5px 8px rgb(237, 237,237)',
                       marginBottom: '.5rem',
                       outline: 'none'
                     }}
