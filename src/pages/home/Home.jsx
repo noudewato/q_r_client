@@ -32,6 +32,8 @@ const Home = () => {
   const categoryList = useSelector((state) => state.categoryList)
   const { categories, loading: categoryLoading } = categoryList
 
+  const [filterCategory, setFilterCategory] = useState([])
+
   useEffect(() => {
     dispatch(CategoryGroupListAction())
   }, [dispatch])
@@ -39,6 +41,10 @@ const Home = () => {
   useEffect(() => {
     dispatch(CategoriesListAction())
   }, [dispatch])
+
+  useEffect(() => {
+    setFilterCategory(categories)
+  }, [categories])
 
   useEffect(() => {
     // Set the active group to null to represent all groups
@@ -115,6 +121,7 @@ const Home = () => {
                 <Box sx={{ padding: { xs: '0px 20px', sm: '0 30px', md: '0 300px', lg: '0 500px' }}}>
                   <input
                     type="text"
+                    value={categorySearch}
                     style={{
                       width: '100%',
                       padding: '.5rem 1rem',
@@ -134,8 +141,8 @@ const Home = () => {
               ) : (
                 <Box sx={{ padding: { xs: '20px', sm:'20px', md: '0px 50px', lg: '20px 250px'} }}>
                   <Grid container rowSpacing={3} columnSpacing={{ xs: 0, sm: 2, md: 3 }}>
-                    {categories &&
-                      categories
+                    {filterCategory &&
+                      filterCategory
                         ?.filter((category) =>
                           // category?.categoryGroup === activeGroup &&
                           category?.name?.toLowerCase().includes(categorySearch),
