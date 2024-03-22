@@ -9,9 +9,9 @@ export default defineConfig({
   registerType: 'autoUpdate',
   includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'mask-icon.svg'],
       manifest: {
-        name: 'Perfect Touch',
-        short_name: 'Perfect Touch',
-        description: 'Perfect Touch Menu',
+        name: 'Berkies',
+        short_name: 'Berkies',
+        description: 'Berkies Menu',
         theme_color: '#ffffff',
         icons: [
           {

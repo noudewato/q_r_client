@@ -1,0 +1,11 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgba(236, 170, 170, 0.884);
+    border-radius: 20px;
+}
+
+img{
+    width: 100%;
+}
