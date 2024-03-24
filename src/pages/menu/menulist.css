@@ -1,24 +1,29 @@
 .horizontal-scroll {
-    overflow-x: auto;
-    white-space: nowrap;
-  }
-  
-  .menu-items {
-    display: inline-block;
-    padding-bottom: 10px;
-  }
-  
-  .menu-item {
-    display: inline-block;
-    padding: 8px 16px;
-    margin-right: 8px;
-    background-color: #f2f2f2;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .menu-item:hover {
-    background-color: red;
-    color: #f2f2f2;
-  }
-  
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.menu-items {
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.menu-item {
+  display: inline-block;
+  padding: 8px 16px;
+  margin-right: 8px;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  background-color: red;
+  color: #f2f2f2;
+}
+
+.menu-item .active {
+  background-color: red;
+  color: #f2f2f2;
+}
+

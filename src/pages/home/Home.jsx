@@ -7,6 +7,7 @@ import Header from "../../components/header/Header";
 import { Link } from "react-router-dom";
 import MenuList from "../menu/MenuList";
 import Footer from "../../components/footer/Footer";
+import { Loader } from "../../components/Loader";
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -31,94 +32,104 @@ const Home = () => {
       sx={{ minHeight: "100vh", backgroundColor: "white" }}
       maxWidth="sm"
     >
-      <Header />
-      <Box>
-        <Box
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-          }}
-        >
-          {/* <img src="assets/logo.jpg" style={{ width: '50px', height: '50px' }} alt="logo" /> */}
-          <Typography
-            sx={{ fontWeight: "bold", padding: "10px 0px 0px 0px" }}
-            variant="h4"
-            component="div"
-          >
-            Berkies Menu
-          </Typography>
-        </Box>
-
-        <Stack sx={{ padding: "10px 0px" }}>
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              borderRadius: "10px",
-              width: "120px",
-              marginBottom: "10px",
-            }}
-          >
-            <PhoneInTalkOutlinedIcon />
-            <a
-              style={{
-                textDecoration: "none",
-                paddingLeft: "3px",
-                fontSize: "18px",
-                color: "black",
-              }}
-              href="tel:0555009156"
-            >
-              0555009156
-            </a>
-          </Box>
-
-          <Box
-            sx={{ display: "flex", alignItems: "center", marginBottom: "10px" }}
-          >
-            <PlaceOutlinedIcon />
-            <Link
-              style={{
-                textDecoration: "none",
-                paddingLeft: "3px",
-                fontSize: "18px",
-                color: "black",
-              }}
-              to={mapUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {location}
-            </Link>
-          </Box>
-
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              marginBottomBottom: "10px",
-            }}
-          >
-            <ScheduleOutlinedIcon color="danger" />
-            <Typography
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <Box sx={{ minHeight: "65vh"}}>
+          <Header />
+          <Box>
+            <Box
               sx={{
-                textDecoration: "none",
-                paddingLeft: "3px",
-                fontSize: "18px",
-                color: "black",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
               }}
             >
-              Monday - Sunday 10:00AM - 11:00PM
-            </Typography>
-          </Box>
-        </Stack>
-      </Box>
-      <Box sx={{ marginBottom: "2rem" }}>
-        <MenuList />
-      </Box>
+              {/* <img src="assets/logo.jpg" style={{ width: '50px', height: '50px' }} alt="logo" /> */}
+              <Typography
+                sx={{ fontWeight: "bold", padding: "10px 0px 0px 0px" }}
+                variant="h4"
+                component="div"
+              >
+                Berkies Menu
+              </Typography>
+            </Box>
 
-        <Footer />
+            <Stack sx={{ padding: "10px 0px" }}>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  borderRadius: "10px",
+                  width: "120px",
+                  marginBottom: "10px",
+                }}
+              >
+                <PhoneInTalkOutlinedIcon />
+                <a
+                  style={{
+                    textDecoration: "none",
+                    paddingLeft: "3px",
+                    fontSize: "18px",
+                    color: "black",
+                  }}
+                  href="tel:0555009156"
+                >
+                  0555009156
+                </a>
+              </Box>
+
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  marginBottom: "10px",
+                }}
+              >
+                <PlaceOutlinedIcon />
+                <Link
+                  style={{
+                    textDecoration: "none",
+                    paddingLeft: "3px",
+                    fontSize: "18px",
+                    color: "black",
+                  }}
+                  to={mapUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {location}
+                </Link>
+              </Box>
+
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  marginBottomBottom: "10px",
+                }}
+              >
+                <ScheduleOutlinedIcon color="danger" />
+                <Typography
+                  sx={{
+                    textDecoration: "none",
+                    paddingLeft: "3px",
+                    fontSize: "18px",
+                    color: "black",
+                  }}
+                >
+                  Monday - Sunday 10:00AM - 11:00PM
+                </Typography>
+              </Box>
+            </Stack>
+          </Box>
+          <Box sx={{ marginBottom: "2rem" }}>
+            <MenuList />
+          </Box>
+        </Box>
+      )}
+
+      <Footer />
     </Container>
   );
 };

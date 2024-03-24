@@ -1,5 +1,3 @@
-import Perfect from "../assets/perfect_touch.jpg"
-
 export const Loader = () => {
   return (
     <div
@@ -7,13 +5,11 @@ export const Loader = () => {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        width: '100%',
-        minHeight: '80vh',
+        minHeight: '40vh',
         flexDirection: 'column'
       }}
     >
-      <img src={`${Perfect}`} width="50px" height="50px" alt="perfect_touch" />
-      ...loading
+      ...Loading
     </div>
   )
 }

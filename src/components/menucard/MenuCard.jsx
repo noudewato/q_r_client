@@ -3,8 +3,8 @@ import { Box, Typography } from "@mui/material";
 
 // eslint-disable-next-line react/prop-types
 const MenuCard = ({ product }) => {
+  const formatter = new Intl.NumberFormat("en-US");
 
-  const numberFormat = Intl.NumberFormat('US')
   if (!product) {
     return null; // or some other fallback component or message
   }
@@ -37,7 +37,7 @@ const MenuCard = ({ product }) => {
 
       <Box sx={{ display: "block", alignItems: "center", padding: "10px 0px" }}>
         <Typography
-          sx={{ fontWeight: "bold", fontSize: "20px", padding: "10px 0px"}}
+          sx={{ fontWeight: "bold", fontSize: "20px", padding: "10px 0px" }}
           component="div"
         >
           {name}
@@ -52,7 +52,7 @@ const MenuCard = ({ product }) => {
           }}
           component="div"
         >
-          GH₵ {numberFormat.format(price)}
+          GH₵ {formatter.format(price)}
         </Typography>
       </Box>
     </Box>
