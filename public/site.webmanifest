@@ -1,6 +1,6 @@
 {
-  "name": "Perfect Touch",
-  "short_name": "Perfect Touch",
+  "name": "Berkies",
+  "short_name": "Berkies",
   "icons": [
     {
       "src": "/pwa-192x192.png",
@@ -31,5 +31,5 @@
   "display": "standalone",
   "background_color": "#FFFFFF",
   "theme_color": "#FFFFFF",
-  "description": "Perfect Touch Menu App"
+  "description": "Berkies menu"
 }

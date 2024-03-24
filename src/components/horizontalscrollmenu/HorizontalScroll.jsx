@@ -1,13 +1,18 @@
-import './scroll.css'
+/* eslint-disable react/prop-types */
+import "./scroll.css";
 
-const menu = ['JOLLOF RICE', 'FRIED RICE', 'NOODLES', 'ICE CREAM', 'FRIES', 'FISH', 'EXTRAS', 'DRINKS'];
-
-const HorizontalScroll = () => {
+const HorizontalScroll = ({ uniqueCategories, handleCategoryClick }) => {
   return (
     <div className="horizontal-scroll">
       <div className="menu-items">
-        {menu.map((item, index) => (
-          <div key={index} className="menu-item">{item}</div>
+        {uniqueCategories?.map((category, index) => (
+          <div
+            key={index}
+            className="menu-item"
+            onClick={() => handleCategoryClick(category)}
+          >
+            {category}
+          </div>
         ))}
       </div>
     </div>

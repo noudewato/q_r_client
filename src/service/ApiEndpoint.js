@@ -1,1 +1,1 @@
-export const BaseUrl = "https://p-t-qr-api.onrender.com/api"
+export const BaseUrl = "https://bk-qr-api.onrender.com/api"

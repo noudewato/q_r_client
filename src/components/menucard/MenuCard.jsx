@@ -1,37 +1,62 @@
-import { Box, Typography } from "@mui/material"
+/* eslint-disable react/prop-types */
+import { Box, Typography } from "@mui/material";
 
-const MenuCard = () => {
+// eslint-disable-next-line react/prop-types
+const MenuCard = ({ product }) => {
+
+  const numberFormat = Intl.NumberFormat('US')
+  if (!product) {
+    return null; // or some other fallback component or message
+  }
+
+  const { name, price, image } = product;
   return (
-    <Box sx={{ 
-        border: '1px solid lightgray', 
-        display: "flex",  
-        padding: '.5rem',
-        borderRadius: '1rem',
+    <Box
+      sx={{
+        border: "1px solid lightgray",
+        display: "flex",
+        alignItems: "center",
+        padding: ".5rem",
+        borderRadius: "1rem",
         position: "relative",
         backgroundClor: "#ffffff",
-        boxShadow: "0 0 20px rgba(0, 0, 0, 0.2)",
-        margin: '1rem 0'
-        }}>
-        <img 
-        src="https://cdn.filestackcontent.com/resize=width:430,height:430,fit:crop,align:center/8NmM6NwZQXa6qqzhSRxq" 
-        alt="food" 
-        style={{ width: '120px', height: '120px', borderRadius: '50%'}}
-        />
+        boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)",
+        margin: "1.5rem 0",
+      }}
+    >
+      <img
+        src={image}
+        alt="food"
+        style={{
+          width: "100px",
+          height: "100px",
+          borderRadius: "50%",
+          padding: "10px",
+        }}
+      />
 
-        <Box sx={{ padding: "10px"}}>
-            <Typography sx={{ fontWeight:"bold" }} component="div">
-              JOLLOF WITH CHICKEN WINGS
-            </Typography>
+      <Box sx={{ display: "block", alignItems: "center", padding: "10px 0px" }}>
+        <Typography
+          sx={{ fontWeight: "bold", fontSize: "20px", padding: "10px 0px"}}
+          component="div"
+        >
+          {name}
+        </Typography>
 
-            <Typography sx={{ fontWeight:"bold", color:"red", margin: "20px 0px" }} component="div">
-                GHC75.00
-            </Typography>
-        </Box>
-
-       
-       
+        <Typography
+          sx={{
+            fontWeight: "bold",
+            color: "red",
+            margin: "10px 0px",
+            fontSize: "22px",
+          }}
+          component="div"
+        >
+          GH₵ {numberFormat.format(price)}
+        </Typography>
+      </Box>
     </Box>
-  )
-}
+  );
+};
 
-export default MenuCard
+export default MenuCard;
