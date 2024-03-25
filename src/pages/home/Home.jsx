@@ -28,14 +28,11 @@ const Home = () => {
   )}`;
 
   return (
-    <Container
-      sx={{ minHeight: "100vh", backgroundColor: "white" }}
-      maxWidth="sm"
-    >
+    <Container sx={{ minHeight: "100vh", backgroundColor: "white" }}>
       {isLoading ? (
         <Loader />
       ) : (
-        <Box sx={{ minHeight: "65vh"}}>
+        <Box sx={{ minHeight: "100vh" }}>
           <Header />
           <Box>
             <Box
