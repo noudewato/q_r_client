@@ -2,8 +2,8 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: rgba(253, 137, 137, 0.884);
     border-radius: 20px;
+    background-color: whitesmoke;
 }
 
 img{
