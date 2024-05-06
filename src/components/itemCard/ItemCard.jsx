@@ -73,7 +73,7 @@ const ItemCard = ({ item }) => {
                 fontSize: "18px",
                 color: "white",
               }}
-              to="/"
+              to={`/items/${item?._id}`}
             >
               View Details
             </Link>

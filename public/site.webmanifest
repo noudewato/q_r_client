@@ -1,6 +1,6 @@
 {
-  "name": "Berkies",
-  "short_name": "Berkies",
+  "name": "Dianga Estate",
+  "short_name": "Dianga Estate",
   "icons": [
     {
       "src": "/pwa-192x192.png",
@@ -29,7 +29,6 @@
   ],
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#FFFFFF",
-  "theme_color": "#FFFFFF",
-  "description": "Berkies menu"
+  "background_color": "#F8C303",
+  "theme_color": "#FFFFFF"
 }

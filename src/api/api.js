@@ -1,0 +1,1 @@
+export const baseUrl = 'https://agent-server-6ebo.onrender.com'

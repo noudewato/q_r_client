@@ -3,6 +3,7 @@
 import { Box, Button, Stack, Typography } from "@mui/material";
 import PhoneInTalkOutlinedIcon from "@mui/icons-material/PhoneInTalkOutlined";
 import { Link } from "react-router-dom";
+import { LandProperties } from "../../data/LandProperty";
 
 const LandPropertyCard = ({ item }) => {
   const currencyFormat = new Intl.NumberFormat("en-GH", {
@@ -53,8 +54,11 @@ const LandPropertyCard = ({ item }) => {
           </Box>
 
           <Box>
-            <Typography variant="body2" sx={{ fontSize: "16px", fontWeight:"bolder" }}>
-              <span style={{ fontWeight: "bold", color: "blue", }}>Price: </span>{" "}
+            <Typography
+              variant="body2"
+              sx={{ fontSize: "16px", fontWeight: "bolder" }}
+            >
+              <span style={{ fontWeight: "bold", color: "blue" }}>Price: </span>{" "}
               {currencyFormat.format(item?.propertyPrice)}
             </Typography>
             <Typography variant="body2" sx={{ fontSize: "16px" }}>
@@ -79,7 +83,7 @@ const LandPropertyCard = ({ item }) => {
                 fontSize: "18px",
                 color: "white",
               }}
-              to="/"
+              to={`/landProperties/${item?._id}`}
             >
               View Details
             </Link>

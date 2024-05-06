@@ -16,8 +16,7 @@ const Footer = () => {
         <Box>
           <Typography variant="body2" color="text.secondary" align="center">
             {"Copyright © "}
-            <Link color="inherit">Fawaz Noudewato</Link>{" "}
-            {new Date().getFullYear()}
+            <Link color="inherit">Dianga</Link> {new Date().getFullYear()}
             {"."}
           </Typography>
         </Box>

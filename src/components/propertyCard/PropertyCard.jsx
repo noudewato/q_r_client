@@ -102,7 +102,7 @@ const PropertyCard = ({ item }) => {
                 fontSize: "18px",
                 color: "white",
               }}
-              to="/"
+              to={`/properties/${item?._id}`}
             >
               View Details
             </Link>

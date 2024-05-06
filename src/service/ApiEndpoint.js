@@ -1,1 +1,0 @@
-export const BaseUrl = "https://bk-qr-api.onrender.com/api"
