@@ -24,7 +24,7 @@ const LandDetails = () => {
     setLoading(true);
     setError(null);
     try {
-      const res = await axios.get(`${baseUrl}/api/properties/${id}`);
+      const res = await axios.get(`${baseUrl}/api/landproperties/${id}`);
       setData(res.data);
     } catch (error) {
       setError("Error fetching data!");
@@ -62,7 +62,7 @@ const LandDetails = () => {
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
               <div className="md:col-span-4">
                 <div className="bg-white shadow-2xl rounded-lg">
-                  <Slider images={data && data.images} />
+                  <Slider images={data?.images} />
                 </div>
 
                 <div className="my-[1rem] p-[1rem] bg-white shadow-2xl rounded-lg">
@@ -72,9 +72,7 @@ const LandDetails = () => {
                   <div>
                     <h3 className="py-[.5rem] text-xl font-semibold">
                       <span style={{ color: "blue" }}>City:</span>{" "}
-                      <span className="text-primary">
-                        {data && data.city}
-                      </span>{" "}
+                      <span className="text-primary">{data && data.city}</span>{" "}
                     </h3>
                   </div>
                   <div
@@ -97,9 +95,7 @@ const LandDetails = () => {
                       <h3 className="py-[.5rem] text-xl font-semibold">
                         <span style={{ color: "blue" }}>Price:</span>{" "}
                         <span className="text-primary">
-                          {myCurrency.format(
-                            data && data.propertyPrice
-                          )}{" "}
+                          {myCurrency.format(data && data.propertyPrice)}{" "}
                         </span>{" "}
                       </h3>
                     </div>
@@ -137,9 +133,9 @@ const LandDetails = () => {
                           fontSize: "18px",
                           color: "green",
                         }}
-                        href="tel:0555009156"
+                        href="tel:0594692989"
                       >
-                        0555009156
+                        0594692989
                       </a>
                     </Button>
                   </Stack>

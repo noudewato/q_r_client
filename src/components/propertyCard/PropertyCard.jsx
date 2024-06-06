@@ -117,9 +117,9 @@ const PropertyCard = ({ item }) => {
                 fontSize: "18px",
                 color: "white",
               }}
-              href="tel:0555009156"
+              href="tel:0594692989"
             >
-              0555009156
+              0594692989
             </a>
           </Button>
         </Box>

@@ -168,9 +168,9 @@ const PropertyDetails = () => {
                           fontSize: "18px",
                           color: "green",
                         }}
-                        href="tel:0555009156"
+                        href="tel:0594692989"
                       >
-                        0555009156
+                        0594692989
                       </a>
                     </Button>
                   </Stack>

@@ -3,7 +3,6 @@
 import { Box, Button, Stack, Typography } from "@mui/material";
 import PhoneInTalkOutlinedIcon from "@mui/icons-material/PhoneInTalkOutlined";
 import { Link } from "react-router-dom";
-import { LandProperties } from "../../data/LandProperty";
 
 const LandPropertyCard = ({ item }) => {
   const currencyFormat = new Intl.NumberFormat("en-GH", {
@@ -98,9 +97,9 @@ const LandPropertyCard = ({ item }) => {
                 fontSize: "18px",
                 color: "white",
               }}
-              href="tel:0555009156"
+              href="tel:0594692989"
             >
-              0555009156
+              0594692989
             </a>
           </Button>
         </Box>
