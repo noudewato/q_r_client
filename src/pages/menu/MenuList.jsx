@@ -9,6 +9,7 @@ import Footer from '../../components/footer/Footer'
 import { Loader } from '../../components/Loader'
 import Message from '../../components/Message'
 import ScrollToTop from '../../components/ScrollToTop'
+import { baseUrl } from '../../service/ApiEndpoint'
 
 const MenuList = () => {
   const dispatch = useDispatch()
