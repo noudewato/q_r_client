@@ -450,9 +450,19 @@ const MenuList = () => {
                     margin: "0",
                     outline: "none",
                     fontSize: "14px",
+                    transition: "border-color 0.3s, box-shadow 0.3s",
                   }}
                   placeholder="Search ..."
                   onChange={(e) => setProductSearch(e.target.value)}
+                  onFocus={(e) => {
+                    e.target.style.borderColor = "red";
+                    e.target.style.boxShadow =
+                      "0 0 5px rgba(52, 152, 219, 0.5)";
+                  }}
+                  onBlur={(e) => {
+                    e.target.style.borderColor = "gold";
+                    e.target.style.boxShadow = "0 4px 8px rgb(237, 237,237)";
+                  }}
                 />
               </Grid>
             </Grid>

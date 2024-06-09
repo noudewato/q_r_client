@@ -318,20 +318,30 @@ const Home = () => {
                       borderRadius: "10px",
                       border: "1px solid gold",
                       boxShadow: "0 4px 8px rgb(237, 237,237)",
-                      margin: ".7rem 0",
+                      margin: "0",
                       outline: "none",
                       fontSize: "14px",
+                      transition: "border-color 0.3s, box-shadow 0.3s",
                     }}
                     placeholder="Search ..."
                     onChange={(e) => setCategorySearch(e.target.value)}
+                    onFocus={(e) => {
+                      e.target.style.borderColor = "red";
+                      e.target.style.boxShadow =
+                        "0 0 5px rgba(52, 152, 219, 0.5)";
+                    }}
+                    onBlur={(e) => {
+                      e.target.style.borderColor = "gold";
+                      e.target.style.boxShadow = "0 4px 8px rgb(237, 237,237)";
+                    }}
                   />
                 </Box>
               </Box>
               <Box
                 sx={{
                   padding: {
-                    xs: "20px",
-                    sm: "20px",
+                    xs: "20px 10px",
+                    sm: "20px 10px",
                     md: "0px 50px",
                     lg: "20px 250px",
                   },

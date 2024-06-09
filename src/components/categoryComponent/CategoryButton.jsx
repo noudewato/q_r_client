@@ -7,10 +7,10 @@ import PropTypes from 'prop-types'
 
 const ImageButton = styled(ButtonBase)(({ theme }) => ({
   position: 'relative',
-  height: 100,
+  height: 120,
   [theme.breakpoints.down('sm')]: {
     width: '100% !important', // Overrides inline-style
-    height: 100,
+    height: 120,
   },
   '&:hover, &.Mui-focusVisible': {
     zIndex: 1,
