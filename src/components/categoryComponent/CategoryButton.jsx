@@ -7,10 +7,10 @@ import PropTypes from 'prop-types'
 
 const ImageButton = styled(ButtonBase)(({ theme }) => ({
   position: 'relative',
-  height: 200,
+  height: 100,
   [theme.breakpoints.down('sm')]: {
     width: '100% !important', // Overrides inline-style
-    height: 200,
+    height: 100,
   },
   '&:hover, &.Mui-focusVisible': {
     zIndex: 1,
@@ -64,7 +64,7 @@ const ImageBackdrop = styled('span')(({ theme }) => ({
 }))
 
 const ImageMarked = styled('span')(({ theme }) => ({
-  height: 3,
+  height: 1,
   width: 18,
   backgroundColor: theme.palette.common.white,
   position: 'absolute',
@@ -75,7 +75,7 @@ const ImageMarked = styled('span')(({ theme }) => ({
 }))
 
 const CategoryButton = ({ category }) => {
-  const { name, image, _id } = category
+  const { ProductCategoryName, image, id } = category
   return (
     <Box
       sx={{
@@ -89,12 +89,12 @@ const CategoryButton = ({ category }) => {
     >
       <ImageButton
         focusRipple
-        key={_id}
+        key={id}
         style={{
           width: '100%',
         }}
       >
-        <Link to={`/menu/${_id}`}>
+        <Link state={category} to={`/menu/${id}`}>
           <ImageSrc style={{ backgroundImage: `url(${image})` }} />
           <ImageBackdrop className="MuiImageBackdrop-root" />
           <Image>
@@ -111,7 +111,7 @@ const CategoryButton = ({ category }) => {
                 fontWeight: 'bold',
               }}
             >
-              {name}
+              {ProductCategoryName}
               <ImageMarked className="MuiImageMarked-root" />
             </Typography>
           </Image>
